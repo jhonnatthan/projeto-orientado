@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 * {
 	position: relative;
 	margin: 0;
 	padding: 0;
 	border: 0;
+	outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -16,7 +21,7 @@ body {
 main {
 	padding: 0 20px;
 	padding-bottom: 50px;
-	min-height: 70vh;
+	min-height: 75vh;
 }
 
 nav {
@@ -61,11 +66,11 @@ li {
 	margin: 0;
 	opacity: 0;
 	max-height: 0;
-	-webkit-transition: all .25s;
-	-moz-transition: all .25s;
-	-ms-transition: all .25s;
-	-o-transition: all .25s;
-	transition: all .25s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
 }
 
 .open {
@@ -74,11 +79,14 @@ li {
 }
 
 .menu li {
-	display: block;
 	text-align: center;
-	display: block;
+	display: none;
 	overflow: hidden;
 	background-color: #006cb7;
+}
+
+.open li {
+	display: block;
 }
 
 .menu li a {
@@ -89,11 +97,11 @@ li {
 	color: white;
 	font-weight: bold;
 	opacity: 0.6;
-	-webkit-transition: all 500ms linear;
-    -moz-transition: all 500ms linear;
-    -o-transition: all 500ms linear;
-    -ms-transition: all 500ms linear;
-    transition: all 500ms linear;
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
 }
 
 .active a, .menu li a:focus {
@@ -206,9 +214,29 @@ li {
 	border-radius: 5px;
 }
 
-.aluno.pessoal .legenda .social a {
-	color: white;
+.alunos.pessoal .legenda .social {
+	display: inline-block;
+	padding-top: 5vh;
+	width: 100%;
+	text-align: right;
 }
+
+.alunos.pessoal .legenda .social a {
+	display: inline-block;
+	margin-right: 7px;
+	color: white;
+	opacity: .6;
+	-webkit-transition: opacity .3s;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -ms-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.alunos.pessoal .legenda .social a:hover {
+	opacity: 1;
+}
+
 
 .aluno {
 	min-height: 1px;
@@ -306,7 +334,7 @@ li {
 }
 
 .tabela-responsiva thead{
-	border: 2px solid #006cb7;
+	background: rgba(0, 0, 0, 0.03);
 	color: #006cb7;
 	font-weight: bold;
 	text-align: left;
@@ -322,6 +350,11 @@ li {
 
 .sites {
 	margin-bottom: 15px;
+}
+
+.sites ul li {
+	display: inline-block;
+	padding-right: 15px;
 }
 
 
@@ -346,12 +379,14 @@ li {
 
 /* sm */
 @media (min-width: 768px) {
-	
+	.alunos.pessoal {
+		width: 80%;
+	}
 }
 
 
 /* md */
-@media (min-width: 992px) {
+@media (min-width: 1010px) {
 	.menu-icon {
 		display: none;	
 	}
@@ -376,7 +411,7 @@ li {
 	.menu li a {
 	    display: inline-block;
 	    width: auto;
-	    padding: 20px 15px;
+	    padding: 21px 15px;
 		color: #006cb7;
 	}
 
@@ -415,8 +450,9 @@ li {
 		box-shadow: none;
 	}
 
+
 	.alunos.pessoal {
-		width: 60%;
+		width: 65%;
 		margin: 0 auto;
 		background-color: #006cb7;
 		padding-top: 7px;
@@ -439,15 +475,20 @@ li {
 		display: inline-block;
 		float: left;
 		margin-top: 0;
-		width: 45%;
+		width: 50%;
 		margin: 0;
 		padding: 2%;
 		border-bottom-right-radius: 20px;
+	    border-top-right-radius: 20px;
 	}
 
 	.alunos.pessoal .legenda .effect {
 		top: 60px;
     	left: -10px;
+	}
+
+	.alunos.pessoal .legenda .social a {
+		
 	}
 
 	.aluno {
@@ -469,10 +510,6 @@ li {
 	.tabela-responsiva {
 		width: 100%;
 		overflow: hidden;
-	}
-
-	.align-right {
-		text-align: right;
 	}
 
 	.sites {
