@@ -16,12 +16,12 @@
 				<span></span>
 			</button>
 			<ul class="menu" id="menu">
-				<li class="active"><a href="#">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="jhonnatthan.html">Jhonnatthan</a></li>
 				<li><a href="lucas.html">Lucas</a></li>
 				<li><a href="tabela.html">Tabela de Curiosidades</a></li>
 				<li><a href="sites.html">Sites Favoritos</a></li>
-				<li><a href="contato.html">Contato</a></li>
+				<li class="active"><a href="#">Contato</a></li>
 			</ul>
 		</nav>		
 	</header>
@@ -29,29 +29,28 @@
 		<section>
 			<div class="header">
 				<div class="title">
-					<h1>Projeto Orientado</h1>	
-				</div>
-				<div class="subtitle">
-					<h2>Índice de alunos</h2>
-					<p>Clique sobre a imagem para abrir mais sobre o aluno desejado: </p>
+					<h1>Formulário de Contato</h1>	
 				</div>
 			</div>
-			<div class="alunos">
-				<a class="aluno" href="jhonnatthan.html">
-					<img src="img/jhonnatthan.jpg" alt="Jhonnatthan">
-					<div class="legenda">
-						<div class="effect"></div>
-						<h3>Jhonnatthan</h3>
-					</div>
-				</a>
-
-				<a class="aluno" href="lucas.html">
-					<img src="img/lucas.jpg" width="200" alt="Lucas">
-					<div class="legenda">	
-						<div class="effect"></div>			
-						<h3>Lucas</h3>
-					</div>
-				</a>
+			<div class="form">
+				<form>
+					<label>
+						Nome: <input type="text" name="nome" placeholder="Digite seu nome" required>
+					</label>
+					<label>
+						Telefone: <input type="tel" name="telefone" data-mask="(##) #####-####" required>
+					</label>
+					<label>
+						Email: <input type="email" name="email" placeholder="Digite seu email" required>
+					</label>
+					<label>
+						Assunto: <input type="text" name="assunto" placeholder="Digite o assunto desejado" required>
+					</label>					
+					<label>
+						Mensagem: <textarea rows="7" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+					</label>
+					<input type="submit" name="Enviar">
+				</form>
 			</div>
 		</section>
 	</main>
@@ -59,10 +58,8 @@
 		<div class="footer">
 			<p>Todos os direitos reservados &copy; - 2018</p>
 		</div>
-	</footer>
-	<div class="contato-float">
-		<a href="contato.html">Entrar em contato</a>
-	</div>
+	</footer>	
+	<script src="js/puremask.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>

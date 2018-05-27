@@ -21,7 +21,7 @@ body {
 main {
 	padding: 0 20px;
 	padding-bottom: 50px;
-	min-height: 75vh;
+	min-height: 80vh;
 }
 
 nav {
@@ -34,6 +34,7 @@ nav {
 html {
 	background-color: #006cb7; 
 }
+
 
 footer {
 	background-color: #006cb7;
@@ -207,7 +208,8 @@ li {
 	float: none;
 }
 
-.alunos.pessoal .legenda h3 {
+.alunos.pessoal .legenda h2 {
+	font-size: 1.2rem;
 	background-color: rgba(0, 0, 0, 0.1);
 	padding: 5px 10px;
 	margin-bottom: 15px;
@@ -279,7 +281,8 @@ li {
     transform: rotate(45deg);
 }
 
-.alunos .legenda h3 {
+.alunos .legenda h2 {
+	font-size: 1.2rem;
 	text-align: center;
 	margin: 0;
 }
@@ -352,11 +355,118 @@ li {
 	margin-bottom: 15px;
 }
 
-.sites ul li {
-	display: inline-block;
-	padding-right: 15px;
+.sites h3 {
+	font-size: 1.9rem;
 }
 
+.sites ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding-right: 15px;
+	width: 100%;
+	filter: grayscale(50%);
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+}
+
+.sites ul li:hover {
+	filter: grayscale(0%);
+}
+
+.sites li a img {
+	display: block;
+	margin-top: 15px;
+	width: 100%; 
+}
+
+.sites li a p {
+	font-size: 1.7rem;
+	text-align: center;
+}
+
+.form form {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form label {
+	font-size: 1.5rem;
+	color: #006cb7;
+}
+
+.form input {
+	display: block;
+	width: 100%;
+	height: 35px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	font-size: 1.3rem;
+	padding: 10px;
+}
+
+.form textarea {
+	display: block;
+	width: 100%;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	font-size: 1.3rem;
+	padding: 10px;
+	font-size: 1.2rem;
+}
+
+.form input[type="submit"] {
+	background-color: #006cb7;
+	color: white;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding: 7px 0;
+	height: auto;
+	filter: grayscale(50%);
+	margin-top: 15px;
+	cursor: pointer;
+	-webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+}
+
+.form input[type="submit"]:hover {
+	filter: grayscale(0%);
+}
+
+.contato-float {
+	position: fixed;
+	bottom: -15px;
+	right: 5px;
+	background-color: #006cb7;
+	padding: 10px 15px 20px 20px;
+	font-size: 1rem;
+	color: white;
+	border-radius: 10px;
+	text-transform: uppercase;
+	box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+}
+
+.contato-float a {
+	color: white;
+	text-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
+}
+
+input::placeholder, textarea::placeholder {
+	font-size: 1.3rem;
+	opacity: .4;
+	font-weight: normal;
+	font-family: 'Titillium Web';
+}
+
+textarea::placeholder {
+	font-size: 1.2rem;
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -372,6 +482,7 @@ li {
     background: #000; 
 }
 
+
 /* xs */
 @media (min-width: 576px) {
 
@@ -381,6 +492,13 @@ li {
 @media (min-width: 768px) {
 	.alunos.pessoal {
 		width: 80%;
+		margin: 0 auto;
+	}
+	.form form {
+		width: 70%;
+	}
+	.sites ul li {
+		width: 49%;
 	}
 }
 
@@ -487,10 +605,6 @@ li {
     	left: -10px;
 	}
 
-	.alunos.pessoal .legenda .social a {
-		
-	}
-
 	.aluno {
 		text-align: center;	
 		width: 48%;		
@@ -508,8 +622,13 @@ li {
 	}
 
 	.tabela-responsiva {
-		width: 100%;
+		width: 70%;
+		margin: 0 auto;
 		overflow: hidden;
+	}
+
+	.tabela-responsiva td, .tabela-responsiva th {
+		font-size: 1.2rem;
 	}
 
 	.sites {
@@ -517,6 +636,13 @@ li {
 		width: 48%;
 		float: left;
 		padding: 1%;
+	}
+	.form form {
+		width: 50%;
+	}
+	
+	.sites ul li {
+		width: 24%;
 	}
 }	
 
@@ -530,4 +656,10 @@ li {
 	content: '';
 	display: table;
 	clear: both;
+}
+
+section:after {
+	content: '';
+    display: table;
+    clear: both;
 }
