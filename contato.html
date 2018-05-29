@@ -33,7 +33,7 @@
 				</div>
 			</div>
 			<div class="form">
-				<form action="" method="post">
+				<form>
 					<label>
 						Nome: <input type="text" name="nome" placeholder="Digite seu nome" required>
 					</label>
@@ -47,7 +47,8 @@
 						Assunto: <input type="text" name="assunto" placeholder="Digite o assunto desejado" required>
 					</label>					
 					<label>
-						Mensagem: <textarea rows="7" name="mensagem" placeholder="Digite sua mensagem" required></textarea>
+						Mensagem: <textarea rows="7" name="mensagem"  placeholder="Digite sua mensagem" maxlength="255" required></textarea>
+						<span>Contador: <span id="contador">0</span> / 255</span>
 					</label>
 					<input type="submit" name="Enviar">
 				</form>

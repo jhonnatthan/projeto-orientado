@@ -20,6 +20,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	if (typeof PureMask !== "undefined") { 
 		PureMask.format("input[name='telefone']", true);    
+
+		const msg = document.querySelector("textarea[name='mensagem']");
+
+		msg.addEventListener("keyup", function() {
+			document.getElementById("contador").innerHTML = this.value.length;
+		});
+
 	}
 
 });
